@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.glob {
+    background-color: rgb(187, 187, 187);
+    display: grid;
+    grid-template-areas: "one two three""four five six";
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.glob div {
+    background-color: rgb(0, 144, 96);
+    counter-increment: count;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four,
+.five,
+.six {
+    height: 200px;
+}
+
+.glob div::before {
+    content: "Element ";
+    color: white;
+    font-weight: bold;
+}
+
+.glob div::after {
+    content: counter(count);
+    color: white;
+    font-weight: bold;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
